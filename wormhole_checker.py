@@ -18,7 +18,7 @@ while True:
     jsonobj=json.loads(r.decode('utf-8'))
     lvl = jsonobj["response"]["game_data"]["level"]+1
     lanes = jsonobj["response"]["game_data"]["lanes"]     
-    with open(logDirectory+str(gameid)+"_offenders.log", "a") as myfile:
+    with open(logDirectory+str(gameid)+"_wormholes.log", "a") as myfile:
       for lane in lanes:
         active_abilities = lane["active_player_abilities"]
         for active in active_abilities:
