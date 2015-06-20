@@ -10,11 +10,7 @@ gameid = 46100
 #DO NOT EDIT
 logged=[] 
 ABILITIES = {
-		10:"Tactical Nuke",
-		11:"Cluster Bomb",
-		12:"Napalm",
-		15:"Cripple Monster",
-		20:"Throw Money"
+		26:"Wormhole"
 	}
 while True:
   try:
@@ -27,7 +23,7 @@ while True:
         active_abilities = lane["active_player_abilities"]
         for active in active_abilities:
           if active["timestamp_done"] > jsonobj["response"]["game_data"]["timestamp_level_start"]:
-            if lvl%100==0: #boss level
+            #if lvl%100==0: #boss level commented out to log all levels
               if active["ability"] in ABILITIES: #nuking abilities
                 message = ['Boss level',str(lvl),time.strftime('%x %X', time.gmtime(active["timestamp_done"])), ABILITIES[active["ability"]], str(76561197960265728+active["accountid_caster"]),"\n"]
                 if message not in logged:
