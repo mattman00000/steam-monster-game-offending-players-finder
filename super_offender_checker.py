@@ -4,8 +4,8 @@ import time
 import traceback
 
 #VARIABLES TO EDIT
-logDirectory = "C:\\Users\\Matt\\Downloads\\"
-gameid = 48265
+logDirectory = "C:\\Users\\Matt\\Downloads\\" #CHANGE THIS TO THE FOLDER YOU WANT LOGS IN
+gameid = 48265 #ROOM NUMBER HERE
 
 #DO NOT EDIT
 logged=[] 
